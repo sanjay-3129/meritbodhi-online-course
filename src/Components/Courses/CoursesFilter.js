@@ -204,48 +204,7 @@ const CoursesFilter = (props) => {
         </div>
 
         {/* Filter based on Language */}
-        <div className="filter filter4">
-          <details>
-            <summary type="button" className="collapsible">
-              Language
-            </summary>
-            <div className="content">
-              <div className="form-check">
-                <label className="form-check-label">
-                  <input
-                    type="radio"
-                    name="language"
-                    className="form-check-input"
-                    value="english"
-                  />
-                  English
-                </label>
-              </div>
-              <div className="form-check">
-                <label className="form-check-label">
-                  <input
-                    type="radio"
-                    name="language"
-                    className="form-check-input"
-                    value="tamil"
-                  />
-                  Tamil
-                </label>
-              </div>
-              <div className="form-check">
-                <label className="form-check-label">
-                  <input
-                    type="radio"
-                    name="language"
-                    className="form-check-input"
-                    value="hindi"
-                  />
-                  Hindi
-                </label>
-              </div>
-            </div>
-          </details>
-        </div>
+        
 
         {/* Filter based on Rating */}
         <div className="filter filter5">

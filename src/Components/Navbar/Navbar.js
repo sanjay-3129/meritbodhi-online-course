@@ -158,7 +158,7 @@ const Navbar = (props) => {
             {cat.categoryName}
             <i className="fas fa-chevron-right"></i>
           </Link>
-          <ul className="sub-menu">
+          {/* <ul className="sub-menu">
             {cat.subcategoryList.map((subcat) => {
               return (
                 <li>
@@ -176,7 +176,7 @@ const Navbar = (props) => {
                 View More
               </Link>
             </li>
-          </ul>
+          </ul> */}
         </li>
       );
     });
@@ -229,7 +229,7 @@ const Navbar = (props) => {
               </a>
               {/* <!-- Dropdown Menu--> */}
               <ul className="dropdown-menu">
-                {/* <li>
+                 <li>
                   <a className="dropdown-item" href="courses.html">
                     FREE COURSES<i className="fas fa-chevron-right"></i>
                   </a>
@@ -255,23 +255,23 @@ const Navbar = (props) => {
                       </a>
                     </li>
                   </ul>
-                </li> */}
+                </li> 
                 {courseUi}
                 <li>
-                  {/* <a
+                   <a
                     className="dropdown-item"
                     href={`${props.match.url}/courses`}
                     style={{ paddingLeft: "0px" }}
                   >
                     View All
-                  </a> */}
-                  {/* <div
+                  </a> 
+                   <div
                     className="dropdown-item"
                     onClick={() => pushHandler("/dashboard/courses")}
                     style={{ paddingLeft: "0px" }}
                   >
                     View All
-                  </div> */}
+                  </div> 
                   <Link
                     action="push"
                     className="dropdown-item"

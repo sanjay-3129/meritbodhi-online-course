@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const InstitutionInfo = (props) => {
   return (
     <section className="info">
