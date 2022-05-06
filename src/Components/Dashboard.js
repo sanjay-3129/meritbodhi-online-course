@@ -32,6 +32,7 @@ const Dashboard = (props) => {
   const [isTimedout, setIsTimedout] = useState(false);
   const authCtx = useContext(AuthContext);
   const [category, setCategory] = useState(null);
+  const [carouselData, setCarouselData] = useState(null);
   const [loading, setloading] = useState(false);
 
   useEffect(() => {
@@ -39,16 +40,26 @@ const Dashboard = (props) => {
     if (props.history.location.pathname === "/dashboard") {
       props.history.push("/dashboard/home");
     }
+    db.collection("content")
+      .doc("carousel")
+      .get()
+      .then((doc) => {
+        setCarouselData(doc.data().banner);
+        console.log("carouselData", doc.data().banner);
+      });
+
     db.collection("category")
       .doc("categories")
       .get()
       .then((doc) => {
         setCategory(doc.data().catDetails);
+        console.log("Category", doc.data().catDetails);
         sessionStorage.setItem(
           "categories",
           JSON.stringify(doc.data().catDetails)
         );
       });
+
     setTimeout(() => {
       setloading(true);
     }, 2000);
@@ -59,8 +70,8 @@ const Dashboard = (props) => {
     autoplay: true,
     animationData: bookLoader.default,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
 
   const handleClose = () => {
@@ -83,7 +94,7 @@ const Dashboard = (props) => {
     db.collection("students")
       .doc(authCtx.user.id)
       .update({
-        isLoggedIn: false
+        isLoggedIn: false,
       })
       .then(() => {
         auth
@@ -132,7 +143,7 @@ const Dashboard = (props) => {
             top: 0,
             bottom: 0,
             left: 0,
-            right: 0
+            right: 0,
           }}
         >
           <Lottie options={defaultOptions1} height={300} width={300} />
@@ -144,7 +155,12 @@ const Dashboard = (props) => {
             <CoursesContextProvider>
               <Switch>
                 <Route path={`/dashboard/home`}>
-                  <Home authCtx={authCtx} category={category} {...props} />
+                  <Home
+                    authCtx={authCtx}
+                    category={category}
+                    carousel={carouselData}
+                    {...props}
+                  />
                 </Route>
                 <Route path={`/dashboard/courses/:courseId`}>
                   {/* <SingleCourseDetails /> */}
