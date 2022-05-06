@@ -1,6 +1,5 @@
-import React from "react";
-import AlgoliaSearch from "../../NewFeatureTest/AlgoliaSearch";
-const CarouselImages = () => {
+import React, { useState } from "react";
+const CarouselImages = (props) => {
   return (
     <>
       <section className="home_sect">
@@ -10,50 +9,80 @@ const CarouselImages = () => {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img
+                  style={{ width: "100%", height: "60vh" }}
                   className="img-fluid"
-                  src="/images/bg.jpg"
+                  src={props?.carousel?.banner1 || "/images/bg.jpg"}
                   alt="Carousel_Image"
                 />
                 <div className="img_overlay"></div>
                 <div className="carousel-caption">
-                  <img
+                  <h1>
+                    {props?.carousel?.bannerText1 || "You Can Learn Anything"}
+                  </h1>
+                  <h6>
+                    {props?.carousel?.bannerDesc1 || "You Can Learn Anything"}
+                  </h6>
+                  {/* <img
                     className="carousel-img"
                     src="/images/hicon1.png"
                     alt="Icon"
-                  />
-                  <h3>You Can Learn Anything</h3>
+                  /> */}
+
+                  <a href={props?.carousel?.bannerLink1}>
+                    <button className="btn btn-primary">Learn More</button>
+                  </a>
                 </div>
               </div>
               <div className="carousel-item">
                 <img
                   className="img-fluid"
-                  src="/images/bg2.jpg"
+                  style={{ width: "100%", height: "60vh" }}
+                  src={props?.carousel?.banner2 || "/images/bg2.jpg"}
                   alt="Carousel_Image"
                 />
                 <div className="img_overlay"></div>
                 <div className="carousel-caption">
-                  <img
+                  <h1>
+                    {props?.carousel?.bannerText2 ||
+                      "Self Education Resources & Infos"}
+                  </h1>
+                  <h6>
+                    {props?.carousel?.bannerDesc2 ||
+                      "Self Education Resources & Infos"}
+                  </h6>
+                  {/* <img
                     className="carousel-img"
                     src="/images/hicon2.png"
                     alt="Icon"
-                  />
-                  <h3>Self Education Resources & Infos</h3>
+                  /> */}
+                  <a href={props?.carousel?.bannerLink2}>
+                    <button className="btn btn-primary">Learn More</button>
+                  </a>
                 </div>
               </div>
               <div className="carousel-item">
                 <img
                   className="img-fluid"
-                  src="/images/bg3.jpg"
+                  style={{ width: "100%", height: "60vh" }}
+                  src={props?.carousel?.banner3 || "/images/bg3.jpg"}
                   alt="Carousel_Image"
                 />
                 <div className="img_overlay"></div>
                 <div className="carousel-caption">
-                  <img
+                  <h1>
+                    {props?.carousel?.bannerText3 || "Find The Best Courses"}
+                  </h1>
+                  <h6>
+                    {props?.carousel?.bannerDesc3 || "Find The Best Courses"}
+                  </h6>
+                  {/* <img
                     className="carousel-img"
                     src="/images/hicon4.png"
                     alt="Icon"
-                  />
-                  <h3>Find The Best Courses</h3>
+                  /> */}
+                  <a href={props?.carousel?.bannerLink3}>
+                    <button className="btn btn-primary">Learn More</button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -68,13 +97,14 @@ const CarouselImages = () => {
           </div>
           <div className="over_content">
             <p>
-              Choose From A Range Of <span>Online Courses</span>
+              {/* <span>MertBodhi</span> */}
+              {/* Choose From A Range Of <span>Online Courses</span> */}
             </p>
-            <AlgoliaSearch />
-            <p className="under_q">
+            {/* <AlgoliaSearch /> */}
+            {/* <p className="under_q">
               Technology is bringing a massive way of evolution on Learning
               Things on different ways.
-            </p>
+            </p> */}
           </div>
           {/* <!-- Go to section --> */}
           <div className="scrollbtn">

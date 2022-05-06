@@ -10,14 +10,13 @@ import Testimonal from "../../UI/Home/Testimonal";
 const Home = (props) => {
   // const [topCourse, setTopCourse] = useState(null);
   // const [category, setCategory] = useState(null);
-
   let ui = null;
   if (props.category !== null) {
     ui = <TopCourses category={props.category} />;
   }
   return (
     <>
-      <CarouselImages />
+      <CarouselImages carousel={props.carousel} />
       {props.category !== null && (
         <Category category={props.category} {...props} />
       )}
