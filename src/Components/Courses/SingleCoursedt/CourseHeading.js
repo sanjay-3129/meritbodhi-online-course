@@ -13,7 +13,7 @@ const Testimonal = (props) => {
   const shareCourse = async () => {
     navigator
       .share({
-        url: window.location.href
+        url: window.location.href,
       })
       .then(() => {
         console.log("Sharing successfull");
@@ -29,7 +29,7 @@ const Testimonal = (props) => {
         className="navbar_sect"
         // style={{ backgroundImage: "url(/images/bg4.jpg)" }}
         style={{
-          backgroundImage: `url(https://secure--storage.s3.ap-south-1.amazonaws.com/${props.course.coverImg})`
+          backgroundImage: `url(https://secure--storage.s3.ap-south-1.amazonaws.com/${props.course.coverImg})`,
         }}
       >
         <div className="course_details">
@@ -55,9 +55,10 @@ const Testimonal = (props) => {
               {/* Designing a Online Course Website for education purpose */}
               {props.course.courseName}
             </p>
-            {/* <p className="course_body">
-                <span className="course_tag">Best Seller</span>
-                <span className="course_rating">
+            <p className="course_body">
+            Course Type: <span className="course_tag">{props.course.types}</span>
+              {/* <span className="course_tag">Best Seller</span> */}
+              {/* <span className="course_rating">
                   <span className="fa fa-star"></span>
                   <span className="fa fa-star"></span>
                   <span className="fa fa-star"></span>
@@ -65,8 +66,8 @@ const Testimonal = (props) => {
                   <span className="fa fa-star"></span>
                   <span className="rating_value">4.5</span>
                   <span className="rating_count">(1,432 Ratings)</span>
-                </span>
-              </p> */}
+                </span> */}
+            </p>
             <p className="course_footer">
               {/* <a className="students_count" href="#s">
                   <i className="far fa-user"></i>&ensp;

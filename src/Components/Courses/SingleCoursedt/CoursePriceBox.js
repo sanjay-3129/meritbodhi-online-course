@@ -13,7 +13,7 @@ const CoursePriceBox = (props) => {
   const [price, setPrice] = useState({
     originalPrice: 0,
     discountedPrice: 0,
-    period: 0
+    period: 0,
   });
   const [offers, setOffers] = useState([]);
   const [isPaymentOverlay, setIsPaymentOverlay] = useState(false);
@@ -43,14 +43,25 @@ const CoursePriceBox = (props) => {
       return 0;
     });
     setOffers(offers);
-    let disPrice =
-      (props.course.publish.originalPrice * offers[0].discount) / 100;
-    let discountedPrice = props.course.publish.originalPrice - disPrice;
-    setPrice({
-      originalPrice: props.course.publish.originalPrice,
-      discountedPrice: discountedPrice,
-      period: offers[0].period
-    });
+    let disPrice;
+    let discountedPrice;
+    try {
+      disPrice =
+        (props.course.publish.originalPrice * offers[0].discount) / 100;
+      discountedPrice = props.course.publish.originalPrice - disPrice;
+      setPrice({
+        originalPrice: props.course.publish.originalPrice,
+        discountedPrice: discountedPrice,
+        period: offers[0].period,
+      });
+    } catch (e) {
+      // considering free course
+      setPrice({
+        originalPrice: props.course.publish.originalPrice,
+        discountedPrice: 0,
+        period: 'LifeTime',
+      });
+    }
   }, [authCtx.user, props.course]);
 
   const bookmarkCourse = (course) => {
@@ -71,7 +82,7 @@ const CoursePriceBox = (props) => {
       }
       authCtx.setUser({
         ...user,
-        bookmarks: bookmark
+        bookmarks: bookmark,
       });
     } else {
       // not logged in, push to login page
@@ -101,7 +112,7 @@ const CoursePriceBox = (props) => {
           authCtx.setUser({
             ...user,
             ongoingCourses: [...ongoingCourses, courseBought.ongoingCourse],
-            orders: [...orders, courseBought.order]
+            orders: [...orders, courseBought.order],
           });
         }
       );
@@ -124,7 +135,7 @@ const CoursePriceBox = (props) => {
     let discountedPrice = price.originalPrice - disPrice;
     setPrice({
       originalPrice: price.originalPrice,
-      discountedPrice: discountedPrice
+      discountedPrice: discountedPrice,
     });
   };
 

@@ -161,7 +161,7 @@ const Navbar = (props) => {
           <ul className="sub-menu">
             {cat.subcategoryList.map((subcat) => {
               return (
-                <li>
+                <li className="sub-li">
                   <Link
                     className="dropdown-item"
                     to={`/dashboard/courses?categoryName=${cat.categoryName}&subcategoryName=${subcat.subCategoryName}&subcategoryId=${subcat.subCategoryId}`}
@@ -229,34 +229,90 @@ const Navbar = (props) => {
               </a>
               {/* <!-- Dropdown Menu--> */}
               <ul className="dropdown-menu">
-                {/* <li>
+                <li>
                   <a className="dropdown-item" href="courses.html">
                     FREE COURSES<i className="fas fa-chevron-right"></i>
                   </a>
                   <ul className="sub-menu">
-                    <li>
+                    <li className="sub-li">
                       <a className="dropdown-item" href="courses.html">
                         Course 1
                       </a>
                     </li>
-                    <li>
+                    <li className="sub-li">
                       <a className="dropdown-item" href="courses.html">
                         Course 2
                       </a>
                     </li>
-                    <li>
+                    <li className="sub-li">
                       <a className="dropdown-item" href="courses.html">
                         Course 3
                       </a>
                     </li>
-                    <li>
+                    {/* <li className="sub-li">
                       <a className="dropdown-item" href="courses.html">
                         Course 4
                       </a>
+                    </li> */}
+                  </ul>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="courses.html">
+                    All<i className="fas fa-chevron-right"></i>
+                  </a>
+                  <ul className="sub-menu1">
+                    <li className="sub-li">
+                      <a className="dropdown-item" href="courses.html">
+                        Course 6
+                      </a>
+                    </li>
+                    <li className="sub-li">
+                      <a className="dropdown-item" href="courses.html">
+                        Course 7
+                      </a>
+                    </li>
+                    <li className="sub-li">
+                      <a className="dropdown-item" href="courses.html">
+                        Course 8
+                      </a>
+                    </li>
+                    <li className="sub-li">
+                      <a className="dropdown-item" href="courses.html">
+                        Course 9
+                      </a>
                     </li>
                   </ul>
-                </li> */}
-                {courseUi}
+                </li>
+                <li>
+                  <a className="dropdown-item" href="courses.html">
+                    cources 1<i className="fas fa-chevron-right"></i>
+                  </a>
+                  <ul className="sub-menu2">
+                    <li className="sub-li">
+                      <a className="dropdown-item" href="courses.html">
+                        Course 10
+                      </a>
+                    </li>
+                    <li className="sub-li">
+                      <a className="dropdown-item" href="courses.html">
+                        Course 11
+                      </a>
+                    </li>
+                    <li className="sub-li">
+                      <a className="dropdown-item" href="courses.html">
+                        Course 12
+                      </a>
+                    </li>
+                    <li className="sub-li">
+                      <a className="dropdown-item" href="courses.html">
+                        Course 13
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+               
+               
+                {/* {courseUi} */}
                 <li>
                   {/* <a
                     className="dropdown-item"
@@ -334,12 +390,12 @@ const Navbar = (props) => {
                       </a>
                     </li>
                   </ul>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="institution.html">
-                    NEET
-                  </a>
-                </li>
+                // </li>
+                // <li>
+                //   <a className="dropdown-item" href="institution.html">
+                //     NEET
+                //   </a>
+                // </li>
                 <li>
                   <a className="dropdown-item" href="institution.html">
                     GATE

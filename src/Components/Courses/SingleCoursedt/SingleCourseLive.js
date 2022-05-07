@@ -22,41 +22,54 @@ const SingleCourseLive = (props) => {
     meetingStatus: "",
     meetingTime: "",
     userName: "",
-    userEmail: ""
+    userEmail: "",
   });
 
   useEffect(() => {
     // console.log("Single Course Live");
     let meetings = props.course.meetings;
-    let meet = meetings[meetings.length - 1];
-    let user = props.authCtx.user;
-    let meetDet = {
-      meetingId: meet.meetingId,
-      meetingName: meet.meetingName,
-      meetingPassword: meet.meetingPassword,
-      meetingDuration: meet.meetingDuration,
-      meetingDate: meet.meetingDate,
-      meetingStatus: meet.meetingStatus,
-      meetingTime: meet.meetingTime,
-      userName: user.name,
-      userEmail: user.email
-    };
-    setMeetingDetails(meetDet);
-    let currentDT = new Date().toISOString();
-    let dotInd = currentDT.lastIndexOf(".");
-    currentDT = currentDT.substring(0, dotInd);
-    let meetDT = meet.meetingDate + "T" + meet.meetingTime;
-    if (currentDT > meetDT) {
-      console.log("currentDT > meetDT", currentDT > meetDT);
-      document.getElementById("meetstatus").innerHTML =
-        "Meeting Ended, Wait for next meeting!!!";
+    if (meetings.length !== 0) {
+      let meet = meetings[meetings.length - 1];
+      let user = props.authCtx.user;
+      let meetDet = {
+        meetingId: meet.meetingId,
+        meetingName: meet.meetingName,
+        meetingPassword: meet.meetingPassword,
+        meetingDuration: meet.meetingDuration,
+        meetingDate: meet.meetingDate,
+        meetingStatus: meet.meetingStatus,
+        meetingTime: meet.meetingTime,
+        userName: user.name,
+        userEmail: user.email,
+      };
+      setMeetingDetails(meetDet);
+      let currentDT = new Date().toISOString();
+      let dotInd = currentDT.lastIndexOf(".");
+      currentDT = currentDT.substring(0, dotInd);
+      let meetDT = meet.meetingDate + "T" + meet.meetingTime;
+      if (currentDT > meetDT) {
+        console.log("currentDT > meetDT", currentDT > meetDT);
+        document.getElementById("meetstatus").innerHTML =
+          "Meeting Ended, Wait for next meeting!!!";
+      } else {
+        console.log("currentDT < meetDT", currentDT < meetDT);
+        document.getElementById("meetstatus").innerHTML =
+          "Meeting will start at the respective time & date!!!";
+      }
+      console.log("course", meetDet, currentDT, meetDT);
     } else {
-      console.log("currentDT < meetDT", currentDT < meetDT);
-      document.getElementById("meetstatus").innerHTML =
-        "Meeting will start at the respective time & date!!!";
+      setMeetingDetails({
+        meetingId: "",
+        meetingName: "",
+        meetingPassword: "",
+        meetingDuration: "",
+        meetingDate: "",
+        meetingStatus: "",
+        meetingTime: "",
+        userName: "",
+        userEmail: "",
+      });
     }
-
-    console.log("course", meetDet, currentDT, meetDT);
   }, [props.authCtx.user, props.course.meetings]);
 
   return (
@@ -66,7 +79,11 @@ const SingleCourseLive = (props) => {
         <h2 class="title">Your section will start shortly</h2>
         <div class="row">
           <div class="col-sm-6">
-            <img class="img-fluid" src="" alt="courseimage" />
+            <img
+              class="img-fluid"
+              src={`https://secure--storage.s3.ap-south-1.amazonaws.com/${props.course.thumbnail}`}
+              alt="courseimage"
+            />
           </div>
           <div class="col-sm-6">
             No Of Days Remaining:{" "}
@@ -90,12 +107,17 @@ const SingleCourseLive = (props) => {
           <button class="live-btn" type="submit">
             Join meeting
           </button> */}
-          <a
-            class="live-btn"
-            href={`https://hosted.campuzone.com/zoom?meetingId=${meetingDetails.meetingId}&meetingPassword=${meetingDetails.meetingPassword}&userName=${meetingDetails.userName}&userEmail=${meetingDetails.userEmail}`}
-          >
-            Join meeting
-          </a>
+          {meetingDetails.meetingId !== "" ? (
+            <a
+              class="live-btn"
+              // href={`https://hosted.campuzone.com/zoom?meetingId=${meetingDetails.meetingId}&meetingPassword=${meetingDetails.meetingPassword}&userName=${meetingDetails.userName}&userEmail=${meetingDetails.userEmail}`}
+              href={`https://meritbodhi.com/zoom?meetingId=${meetingDetails.meetingId}&meetingPassword=${meetingDetails.meetingPassword}&userName=${meetingDetails.userName}&userEmail=${meetingDetails.userEmail}`}
+            >
+              Join meeting
+            </a>
+          ) : (
+            <p>Meeting is not sheduled yet!!!</p>
+          )}
           {/* </form> */}
         </div>
       </div>
