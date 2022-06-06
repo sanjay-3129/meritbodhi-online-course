@@ -9,7 +9,7 @@ const CarouselImages = (props) => {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img
-                  style={{ width: "100%", height: "60vh" }}
+                  style={{ width: "100%", height: "100vh" }}
                   className="img-fluid"
                   src={props?.carousel?.banner1 || "/images/bg.jpg"}
                   alt="Carousel_Image"
@@ -36,7 +36,7 @@ const CarouselImages = (props) => {
               <div className="carousel-item">
                 <img
                   className="img-fluid"
-                  style={{ width: "100%", height: "60vh" }}
+                  style={{ width: "100%", height: "100vh" }}
                   src={props?.carousel?.banner2 || "/images/bg2.jpg"}
                   alt="Carousel_Image"
                 />
@@ -63,7 +63,7 @@ const CarouselImages = (props) => {
               <div className="carousel-item">
                 <img
                   className="img-fluid"
-                  style={{ width: "100%", height: "60vh" }}
+                  style={{ width: "100%", height: "100vh" }}
                   src={props?.carousel?.banner3 || "/images/bg3.jpg"}
                   alt="Carousel_Image"
                 />

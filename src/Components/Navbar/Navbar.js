@@ -202,13 +202,6 @@ const Navbar = (props) => {
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul className="navbar-nav">
             <li className="nav-item">
-              {/* <div
-                className="nav-link"
-                onClick={() => pushHandler("/dashboard/home")}
-                style={{ paddingLeft: "0px" }}
-              >
-                Home
-              </div> */}
               <Link
                 action="push"
                 className="nav-link"
@@ -229,7 +222,7 @@ const Navbar = (props) => {
               </a>
               {/* <!-- Dropdown Menu--> */}
               <ul className="dropdown-menu">
-                <li>
+                {/* <li>
                   <a className="dropdown-item" href="courses.html">
                     FREE COURSES<i className="fas fa-chevron-right"></i>
                   </a>
@@ -249,11 +242,6 @@ const Navbar = (props) => {
                         Course 3
                       </a>
                     </li>
-                    {/* <li className="sub-li">
-                      <a className="dropdown-item" href="courses.html">
-                        Course 4
-                      </a>
-                    </li> */}
                   </ul>
                 </li>
                 <li>
@@ -309,10 +297,10 @@ const Navbar = (props) => {
                       </a>
                     </li>
                   </ul>
-                </li>
+                </li> */}
                
-               
-                {/* {courseUi} */}
+        
+                {courseUi}
                 <li>
                   {/* <a
                     className="dropdown-item"
