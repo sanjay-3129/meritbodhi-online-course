@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { SpinnerDotted } from 'spinners-react';
+
+
 const CarouselImages = (props) => {
+ 
   return (
+
+
     <>
       <section className="home_sect">
         <div className="container-fluid p-0">
@@ -124,6 +130,6 @@ const CarouselImages = (props) => {
         </div>
       </section>
     </>
-  );
+  )
 };
 export default CarouselImages;

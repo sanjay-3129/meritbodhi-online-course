@@ -7,7 +7,9 @@ import CarouselView from "../../Reusable/CarouselView";
 import Toast from "../../UI/Toast/Toast";
 // import $ from "jquery";
 // import AWS from "../../Services/AWS";
-import Spinner from "../../UI/Spinner/Spinner";
+// import Spinner from "../../UI/Spinner/Spinner";
+// import { SpinnerDotted } from 'spinners-react';
+import Spinner from "../../Reusable/Spinner"
 const Institution = (props) => {
   const [institutions, setInstitutions] = useState(null);
   const [fromCache, setFromCache] = useState(false);
@@ -24,7 +26,8 @@ const Institution = (props) => {
   let institutionsLists = null;
   if (institutions === null) {
     // console.log("null");
-    institutionsLists = <Spinner />;
+    // institutionsLists = <Spinner />;
+    institutionsLists = <div className="spinner " style={{marginLeft: "50%"}}>  <Spinner/></div>
   } else {
     // console.log("else");
     institutionsLists = institutions.map((institution, i) => (

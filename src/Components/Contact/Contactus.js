@@ -52,7 +52,7 @@ const Contactus = () => {
                   <img src="/images/cicon4.png" alt="Location Icon" />
                 </div>
                 <h4>Our Location</h4>
-                <p>Collin Street West, Victor 8007, Australia.</p>
+                <p>223,Gandhi Street, Anna Nagar, Chennai - 600 028.</p>
               </div>
             </div>
             <div class="col-sm-6 col-lg-4">
@@ -62,9 +62,9 @@ const Contactus = () => {
                 </div>
                 <h4>Make a Call</h4>
                 <p>
-                  Mobile:(+91)77889 90000
+                  Mobile:+91 87541 97140
                   <br />
-                  Mobile:(+91)55 114 252525
+                  Mobile:+91 90429 47606
                   <br />
                 </p>
               </div>
@@ -75,7 +75,7 @@ const Contactus = () => {
                   <img src="/images/cicon3.png" alt="Mail Icon" />
                 </div>
                 <h4>Write Some Words</h4>
-                <p>smartedu@gmail.com</p>
+                <p>support@meritbodhi.com</p>
               </div>
             </div>
           </div>

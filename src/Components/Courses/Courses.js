@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import CoursesFilter from "./CoursesFilter";
 import CourseCard from "../../Reusable/CourseCard";
 import Spinners from "../../UI/Spinner/spinBackdrop";
+import { SpinnerDotted } from 'spinners-react';
 import { getCourses, getFilterOptions } from "./CoursesDB";
 import ReactPaginate from "react-paginate";
 import AlgoliaSearch from "../../NewFeatureTest/AlgoliaSearch";

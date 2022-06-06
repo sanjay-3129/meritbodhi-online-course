@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import Navbar from "./Navbar/Navbar";
 import { Route, Switch } from "react-router-dom";
-
+import Spinner from "../Reusable/Spinner"
 import Home from "./Home/Home";
 import Courses from "./Courses/Courses";
 import Institution from "./Institution/Institution";
@@ -23,11 +23,12 @@ import { auth, db } from "../Services/firebase";
 import AuthContext from "../Context/auth-context";
 
 import * as bookLoader from "../assets/lotties/28893-book-loading.json";
-// import * as bookLoader from "../../public/lotties/28893-book-loading.json";
 import Lottie from "react-lottie";
+// import * as bookLoader from "../../public/lotties/28893-book-loading.json";
 
 const Dashboard = (props) => {
   // console.log("dashboard", props.history);
+  const [loader, setLoader] = useState(false);
   const [showTimeoutModal, setShowTimeoutModal] = useState(false);
   const [isTimedout, setIsTimedout] = useState(false);
   const authCtx = useContext(AuthContext);
@@ -84,6 +85,7 @@ const Dashboard = (props) => {
   };
 
   const logoutHandler = () => {
+    setLoader(true);
     setShowTimeoutModal(false);
     authCtx.setUser(null);
     localStorage.removeItem("userId");
@@ -104,6 +106,8 @@ const Dashboard = (props) => {
             console.log("signed out successfully...");
             // alert("signed out");
             props.history.replace("/login");
+      	    setLoader(false);
+
           })
           .catch((error) => {
             // An error happened.
@@ -115,6 +119,8 @@ const Dashboard = (props) => {
 
   return (
     <>
+    {loader && <Spinner/>}
+    
       {/* {console.log(localStorage.getItem("userId"))} */}
       {sessionStorage.getItem("userId") !== null && (
         <>

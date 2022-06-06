@@ -7,8 +7,10 @@ import $ from "jquery";
 import AuthContext from "../../Context/auth-context";
 import ForgotPassModal from "../../UI/ForgotPassword/ForgotPassModal";
 import { Link } from "react-router-dom";
+import Spinner from "../../Reusable/Spinner"
 
 const Signin = (props) => {
+  const [loader, setLoader] = useState(false);
   // useEffect(() => {
   //   console.log("asda", props.history);
   // }, []);
@@ -82,6 +84,7 @@ const Signin = (props) => {
   };
 
   const submitHandler = (event) => {
+    setLoader(true);
     event.preventDefault();
     // firebase signin auth
     auth
@@ -131,6 +134,10 @@ const Signin = (props) => {
                   authCtx.setIsLoggedIn(true);
                   // props.history.replace(`/home?userId=${userId}`);
                   props.history.replace("/dashboard/home"); // redirect it to home
+                  // setTimeout(() => {
+                  //   setLoader(false);
+                  // }, 2000);
+                  setLoader(false);
                   let ongoingCourses = [];
                   let bookmarks = [];
                   let preferences = [];
@@ -181,9 +188,12 @@ const Signin = (props) => {
           setError("User doesn't exist. Please do register.");
         }
       });
+     
   };
 
   const sendResetMail = (email) => {
+    setLoader(true);
+
     // to sent continuURL, check below link. Now i think, its not needed
     // https://stackoverflow.com/questions/55296314/firebase-redirect-to-webpage-after-successful-password-change
     // console.log(email);
@@ -199,6 +209,8 @@ const Signin = (props) => {
           alert("Provide Correct Email Address");
         }
       });
+      setLoader(false);
+
   };
 
   const forceLogout = () => {
@@ -225,6 +237,7 @@ const Signin = (props) => {
 
   return (
     <>
+    {loader && <Spinner/>}
       <div className="slider-container">
         <Link className={classes.homebtt} to="/dashboard/home">
           <i class="fas fa-home"></i>

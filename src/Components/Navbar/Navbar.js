@@ -555,7 +555,7 @@ const Navbar = (props) => {
                 className="nav-link"
                 to={`/dashboard/aboutus`}
               >
-                Aboutus
+                About us
               </Link>
             </li>
             <li className="nav-item">
