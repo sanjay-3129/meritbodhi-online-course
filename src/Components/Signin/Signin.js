@@ -109,6 +109,7 @@ const Signin = (props) => {
             photoUrl = user.photoUrl;
             if (user.isLoggedIn) {
               // if already one person is logged in
+              setLoader(false);
               setError(
                 "Already logged in, logout from other device to login again..."
               );
