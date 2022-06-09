@@ -1,0 +1,102 @@
+{
+    "timeline": {
+        "soundtrack": {
+            "src": "https://feeds.soundcloud.com/stream/267703548-unminus-white.mp3",
+            "effect": "fadeOut"
+        },
+        "background": "#000000",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "273 Murcheson Drive, East Hampton, NY",
+                            "style": "future",
+                            "size": "x-small",
+                            "position": "bottomLeft",
+                            "offset": {
+                                "x": 0.6,
+                                "y": -0.2
+                            }
+                        },
+                        "start": 1,
+                        "length": 5,
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        }
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://secure--storage.s3.ap-south-1.amazonaws.com/ICwmfLIV-TN.jpg.png"
+                        },
+                        "start": 0,
+                        "length": 13,
+                        "fit": "none",
+                        "scale": 0.11,
+                        "opacity": 0.5,
+                        "position": "bottomRight",
+                        "offset": {
+                            "x": -0.02,
+                            "y": 0.04
+                        },
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        }
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://secure--storage.s3.ap-south-1.amazonaws.com/cLeE3-Cj7Ej-1-1.mp4"
+                        },
+                        "start": 0,
+                        "length": 5,
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://secure--storage.s3.ap-south-1.amazonaws.com/cLeE3-Cj7Ej-1-1.mp4"
+                        },
+                        "start": 4,
+                        "length": 5,
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://secure--storage.s3.ap-south-1.amazonaws.com/cLeE3-Cj7Ej-1-1.mp4"
+                        },
+                        "start": 8,
+                        "length": 5,
+                        "transition": {
+                            "in": "fade",
+                            "out": "fade"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "resolution": "sd"
+    }
+}
