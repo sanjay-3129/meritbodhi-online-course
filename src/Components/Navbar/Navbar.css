@@ -21,6 +21,16 @@
   background-repeat: no-repeat;
 } */
 
+   .navbar-expand-md .navbar-brand .nav_img {
+  
+     /* background-image: url("../../assets/images/logo1.png"); */
+     width: 180px;
+     height: 80px;
+    /* background-size: 215px 60px;
+    background-repeat: no-repeat; */
+    margin-right: 20px;
+  }
+
 /* .nav_img {
   width: 96px;
   height: 50px;
@@ -236,15 +246,15 @@
   .navbar-expand-md .navbar-nav {
     margin-top: 14px;
   }
-  .navbar-expand-md .navbar-brand .nav_img {
-    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/meritbodhi-courses.appspot.com/o/logo's%2Flogo2.png?alt=media&token=cdfac76c-2e35-44d4-bdaf-e8851e141e76"); */
-    background-image: url("../../assets/images/logo1.png");
-    width: 230px;
-    height: 55px;
+  /* .navbar-expand-md .navbar-brand .nav_img {
+  
+     background-image: url("../../assets/images/logo1.png");
+    width: 100px;
+    height: 110px;
     background-size: 215px 60px;
     background-repeat: no-repeat;
     margin-right: 20px;
-  }
+  } */
   .navbar-expand-md .navbar-nav .nav-link {
     font-size: 12px;
     padding: 15px 10px 24px;
@@ -474,9 +484,12 @@
   .navbar-expand-md .navbar-nav button.nav-link {
     padding-left: 80px;
   }
+  .navbar-expand-md .navbar-collapse{
+    width: 80%;
+  }
 }
 
-@media only screen and (min-width: 1337px) {
+@media only screen and (min-width: 1200px) {
   .navbar {
     padding: 8px 10px 0 !important;
   }
@@ -498,5 +511,14 @@
   }
   .navbar-expand-md .navbar-nav .nav-item .far {
     left: 55px;
+  }
+  .navbar-expand-md .navbar-brand .nav_img {
+    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/meritbodhi-courses.appspot.com/o/logo's%2Flogo2.png?alt=media&token=cdfac76c-2e35-44d4-bdaf-e8851e141e76"); */
+    /* background-image: url("../../assets/images/logo1.png"); */
+    width: 230px;
+    height: 110px;
+    /* background-size: 215px 60px;
+    background-repeat: no-repeat; */
+    margin-right: 20px;
   }
 }

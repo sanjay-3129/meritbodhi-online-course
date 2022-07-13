@@ -199,8 +199,8 @@ const Navbar = (props) => {
         id="navigation"
       >
         <Link action="push" className="navbar-brand" to={`/dashboard/home`}>
-          <div className="nav_img"></div>
-          {/* <img src="/images/logo1.png" alt="" className="nav_img" /> */}
+          {/* <div className="nav_img"></div> */}
+          <img src="/images/logo1.png" alt="" className="nav_img" />
         </Link>
         <button
           className="navbar-toggler"
