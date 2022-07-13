@@ -52,7 +52,8 @@ const Contactus = () => {
                   <img src="/images/cicon4.png" alt="Location Icon" />
                 </div>
                 <h4>Our Location</h4>
-                <p>223,Gandhi Street, Anna Nagar, Chennai - 600 028.</p>
+                <p>NO 1/123,Thirumangalam Road,</p>
+                <p>Villivakkam,Chennai-600049.</p>
               </div>
             </div>
             <div class="col-sm-6 col-lg-4">
@@ -62,10 +63,10 @@ const Contactus = () => {
                 </div>
                 <h4>Make a Call</h4>
                 <p>
-                  Mobile:+91 87541 97140
+                  Mobile:+(91)-9884499966
                   <br />
-                  Mobile:+91 90429 47606
-                  <br />
+                  {/* Mobile:+91 90429 47606
+                  <br /> */}
                 </p>
               </div>
             </div>
@@ -75,7 +76,10 @@ const Contactus = () => {
                   <img src="/images/cicon3.png" alt="Mail Icon" />
                 </div>
                 <h4>Write Some Words</h4>
-                <p>support@meritbodhi.com</p>
+                <p>
+                  We need to create Offical mail box for Meritbodhi
+                  {/* support@meritbodhi.com */}
+                </p>
               </div>
             </div>
           </div>

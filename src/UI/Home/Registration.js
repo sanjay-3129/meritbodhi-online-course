@@ -25,7 +25,7 @@ const Registration = (props) => {
           <div className="inner_container">
             <p>STARTING ONLINE LEARNING</p>
             <h3>
-              ENHANCE YOUR SKILLS WITH BEST
+              ENHANCE YOUR COMPETENCY WITH BEST
               <br />
               ONLINE COURSES
             </h3>

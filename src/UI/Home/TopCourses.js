@@ -66,7 +66,7 @@ const TopCourses = (props) => {
   return (
     <section className="course_sect">
       <div className="container-fluid">
-        <h3>Browse Our Courses</h3>
+        <h3> Course Catagories</h3>
         <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
         <div className="course_filter_tab">
           <ul className="list-inline">

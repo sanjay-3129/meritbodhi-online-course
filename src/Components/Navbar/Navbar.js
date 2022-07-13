@@ -15,7 +15,11 @@ const Overlay = (props) => {
       <div className="header">
         <img
           className="img-fluid"
-          src={props.user === null ? "/images/4.jpg" : props.user.photoUrl}
+          src={
+            props.user === null
+              ? "/images/Raghu-Logo-landscape.png"
+              : props.user.photoUrl
+          }
           alt="userprofile"
         />
         <p>
@@ -75,10 +79,16 @@ const Navbar = (props) => {
         if ($(window).scrollTop() > 50) {
           $(".fixed-top").css("background-color", "#fff");
           $("#navigation").css("box-shadow", "0px 0px 30px rgb(0 0 0 / 10%)");
-          $(".navbar_img").css(
-            "background-image",
-            "url(../../others/Bodhi1.png)"
-          );
+          $(".nav_img").css({
+            // "background-image": url(
+            //   "https://firebasestorage.googleapis.com/v0/b/meritbodhi-courses.appspot.com/o/logo's%2Flogo1.png?alt=media&token=061b7750-570f-4bca-8b21-e16acb68e15a"
+            // ),
+            // width: "230px",
+            // height: "56px",
+            // "background-size": "215px 60px",
+            // "background-repeat": "no-repeat",
+            // "margin-right": "20px",
+          });
           $(".navbar-brand").css(
             "border-right",
             "1px solid rgba(0, 0, 0, 0.2)"
@@ -88,7 +98,7 @@ const Navbar = (props) => {
         } else {
           $(".fixed-top").css("background-color", "");
           $("#navigation").css("box-shadow", "");
-          $(".navbar_img").css("background-image", "");
+          $(".nav_img").css("background-image", "");
           $(".navbar-brand").css("border-right", "");
           $(".nav-link").css("color", "");
           $("#usericon").css("color", "");
@@ -189,7 +199,8 @@ const Navbar = (props) => {
         id="navigation"
       >
         <Link action="push" className="navbar-brand" to={`/dashboard/home`}>
-          <div className="navbar_img"></div>
+          <div className="nav_img"></div>
+          {/* <img src="/images/logo1.png" alt="" className="nav_img" /> */}
         </Link>
         <button
           className="navbar-toggler"
@@ -218,7 +229,7 @@ const Navbar = (props) => {
                 id="navbardrop"
                 data-toggle="dropdown"
               >
-                Courses
+                Course List
               </a>
               {/* <!-- Dropdown Menu--> */}
               <ul className="dropdown-menu">
@@ -298,8 +309,7 @@ const Navbar = (props) => {
                     </li>
                   </ul>
                 </li> */}
-               
-        
+
                 {courseUi}
                 <li>
                   {/* <a

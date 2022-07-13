@@ -11,10 +11,10 @@ const Footer = (props) => {
             <div className="col-sm-6 col-md-4 col-md-3 col-lg-3">
               <div className="footer_contact_widget">
                 <h4>CONTACT</h4>
-                <p>329 Queensberry Street, North Melbourne </p>
-                <p>VIC 3051, Australia.</p>
-                <p>123 456 7890</p>
-                <p>support@smartedu.com</p>
+                <p>NO 1/123,THIRUMANGALAM ROAD,</p>
+                <p>VILLIVAKKAM,CHENNAI-600049</p>
+                <p>9884499966</p>
+                {/* <p>support@smartedu.com</p> */}
               </div>
             </div>
             <div className="col-sm-6 col-md-4 col-md-3 col-lg-2">

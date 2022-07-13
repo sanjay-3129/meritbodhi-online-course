@@ -29,6 +29,12 @@ body {
     "Liberation Mono", "Courier New", monospace;
 }
 /*=================================Home Section===================================================*/
+
+/* .nav_img{
+  width: 50%;
+  height: 50%;
+} */
+
 .home_sect {
   position: relative;
   margin-top: -3px;

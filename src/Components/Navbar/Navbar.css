@@ -13,11 +13,18 @@
 .fixed-top {
   position: relative;
 }
-.navbar-expand-md .navbar-brand .navbar_img {
-  background-image: url("../../others/Bodhi1.png");
+/* .navbar-expand-md .navbar-brand .nav_img {
+  background-image: url("../../assets/images/logo1.png");
+  width: 230px;
+  height: 55px;
+  background-size: 215px 60px;
+  background-repeat: no-repeat;
+} */
+
+/* .nav_img {
   width: 96px;
   height: 50px;
-}
+} */
 .navbar-expand-md .navbar-collapse {
   width: 50%;
 }
@@ -229,10 +236,13 @@
   .navbar-expand-md .navbar-nav {
     margin-top: 14px;
   }
-  .navbar-expand-md .navbar-brand .navbar_img {
-    background-image: url("../../others/Bodhi1.png");
-    width: 96px;
-    height: 50px;
+  .navbar-expand-md .navbar-brand .nav_img {
+    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/meritbodhi-courses.appspot.com/o/logo's%2Flogo2.png?alt=media&token=cdfac76c-2e35-44d4-bdaf-e8851e141e76"); */
+    background-image: url("../../assets/images/logo1.png");
+    width: 230px;
+    height: 55px;
+    background-size: 215px 60px;
+    background-repeat: no-repeat;
     margin-right: 20px;
   }
   .navbar-expand-md .navbar-nav .nav-link {
@@ -338,10 +348,20 @@
     display: block;
   }
 
-  .navbar-collapse .navbar-nav li.dropdown ul.dropdown-menu li:hover .sub-menu1 {
+  .navbar-collapse
+    .navbar-nav
+    li.dropdown
+    ul.dropdown-menu
+    li:hover
+    .sub-menu1 {
     display: block;
   }
-  .navbar-collapse .navbar-nav li.dropdown ul.dropdown-menu li:hover .sub-menu2 {
+  .navbar-collapse
+    .navbar-nav
+    li.dropdown
+    ul.dropdown-menu
+    li:hover
+    .sub-menu2 {
     display: block;
   }
 
@@ -458,7 +478,7 @@
 
 @media only screen and (min-width: 1337px) {
   .navbar {
-    padding: 8px 64px 0 !important;
+    padding: 8px 10px 0 !important;
   }
   .navbar-expand-md .navbar-nav > li:nth-child(7) a.nav-link {
     padding: 17px 12px 28px 80px;
@@ -471,7 +491,10 @@
     padding-left: 140px;
   }
   .navbar-expand-md .navbar-collapse {
-    width: 89%;
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
   }
   .navbar-expand-md .navbar-nav .nav-item .far {
     left: 55px;

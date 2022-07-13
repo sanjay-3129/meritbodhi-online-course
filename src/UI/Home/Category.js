@@ -11,7 +11,7 @@ const Category = (props) => {
   return (
     <section className="crs_sect" id="ourcourse">
       <div className="container-fluid">
-        <h3>Via Categories Courses</h3>
+        <h3>Courses</h3>
         <p className="crs_title">
           Cum doctus civibus efficiantur in imperdiet deterruisset.
         </p>
